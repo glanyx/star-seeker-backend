@@ -1,0 +1,1 @@
+export { default as GatesRoute } from './gatesRoute'
