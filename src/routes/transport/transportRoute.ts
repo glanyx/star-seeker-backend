@@ -20,13 +20,13 @@ router.get('/:distance', (req, res) => {
   }
 
   // personal transportation costs
-  const personalFuelCosts = +distance * PERSONAL_COST.FUEL
-  const personalStorageCosts = +parking * PERSONAL_COST.STORAGE
-  const personalCost = (personalFuelCosts + personalStorageCosts) * Math.ceil(+passengers / PERSONAL_COST.CAPACITY)
+  const personalFuelCosts = (+distance * PERSONAL_COST.FUEL) * Math.ceil(+passengers / PERSONAL_COST.CAPACITY)
+  const personalStorageCosts = (+parking * PERSONAL_COST.STORAGE) * Math.ceil(+passengers / PERSONAL_COST.CAPACITY)
+  const personalCost = (personalFuelCosts + personalStorageCosts)
 
   // hstc transportation costs
-  const hstcFuelCosts = +distance * HSTC_COST.FUEL
-  const hstcCost = (hstcFuelCosts) * Math.ceil(+passengers / HSTC_COST.CAPACITY)
+  const hstcFuelCosts = +distance * HSTC_COST.FUEL * Math.ceil(+passengers / HSTC_COST.CAPACITY)
+  const hstcCost = hstcFuelCosts
 
   const usePersonal = (personalCost < hstcCost)
 

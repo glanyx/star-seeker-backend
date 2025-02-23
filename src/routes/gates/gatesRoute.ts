@@ -35,7 +35,7 @@ router.get('/:locationId/to/:destinationId', async (req, res) => {
   const destinationGate = gates.find(gate => gate.id === destinationId)
 
   if (!locationGate || !destinationGate) {
-    res.status(404).send(`No Gate found by ID "${!locationId ? locationId : destinationId}"`)
+    res.status(404).send(`No Gate found by ID "${!locationGate ? locationId : destinationId}"`)
     return
   }
 

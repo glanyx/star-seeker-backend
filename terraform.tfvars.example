@@ -1,0 +1,3 @@
+aws_region = "your aws region"
+db_username = "postgres"
+db_password = "password"
