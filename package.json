@@ -2,12 +2,13 @@
    "name": "star-seeker-backend",
    "version": "1.0.0",
    "description": "Backend for Star Seeker web application challenge",
-   "main": "build/index.js",
+   "main": "dist/index.js",
    "scripts": {
       "build": "tsc",
       "start": "node dist/index.js",
       "dev": "nodemon -r dotenv/config src/index.ts",
-      "typeorm": "typeorm-ts-node-commonjs"
+      "typeorm": "typeorm-ts-node-commonjs",
+      "docker": "docker build -t star_seeker_api ."
    },
    "author": "mikek",
    "license": "ISC",
