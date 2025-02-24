@@ -1,6 +1,14 @@
+![Star Seeker Logo](http://star-seeker-load-balancer-1543905369.eu-west-2.elb.amazonaws.com/logo.svg)
+
 Welcome to [Star Seeker](http://star-seeker-load-balancer-1543905369.eu-west-2.elb.amazonaws.com/), an application developed by Hyperspace Tunneling Corp., with [Express.js](https://expressjs.com/).
 
 Thank you for choosing us to plan your interstellar journey. We couldn't be more pleased to take your credits. Err, help you with your trip across the stars! Start your cosmic adventure now!
+
+---
+
+## Architecture
+
+![Architecture Diagram](https://cdn.discordapp.com/attachments/971816757780156459/1343504465780674651/AWs_API_Diagram.png?ex=67bd8389&is=67bc3209&hm=937befc36b2b43cabfe2b09888dd8523694849568112b3aafceb5e02d7df9689&)
 
 ---
 
@@ -8,6 +16,8 @@ Thank you for choosing us to plan your interstellar journey. We couldn't be more
 
 The API itself can be found [here](http://18.175.152.119:3000/).
 Full information on how to use the API can be found in the [documentation](https://documenter.getpostman.com/view/17845991/2sAYdcsCkh).
+
+---
 
 ## Local Environment
 
@@ -17,6 +27,8 @@ To run the Express server, simply install the required modules with npm and run 
 npm install
 npm run dev
 ```
+
+---
 
 ## Deploying
 
