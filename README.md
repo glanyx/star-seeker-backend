@@ -28,11 +28,4 @@ terraform validate
 terraform apply
 ```
 
-After deploying the infrastructure, you can create a new Docker container and upload the image to AWS ECR.
-
-```bash
-docker build -t star-seeker-api .
-aws ecr get-login-password --region \[your_aws_region\] | docker login --username AWS --password-stdin \[your_aws_account_id\].dkr.ecr.eu-west-2.amazonaws.com
-docker tag star-seeker-api:latest \[your_aws_account_id\].dkr.ecr.eu-west-2.amazonaws.com/star-seeker-api:latest
-docker push \[your_aws_account_id\].dkr.ecr.eu-west-2.amazonaws.com/star-seeker-api:latest
-```
+The deployment process for the actual API is completely automated, resulting in a fully functioning end-to-end CI/CD pipeline. Github Actions automatically starts a new Docker build whenever new code is pushed to the master branch. This build is pushed to the repository configured in the workflow file. To be able to use this workflow, a user must be configured on AWS IAM with sufficient policies to the EC2 Container Registry and ECS. This user will need access keys, with a key configured as a secret on the relevant Github repository.
